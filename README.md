@@ -50,12 +50,10 @@
 
 經過上述步驟之後就可以進行回傳文件的剖析，可以得到文件的斷句結果也可以得到文件的斷詞結果：
 
-* 取得斷句結果
+取得斷句結果
 
-    <?php
     $return_sentences = $ckip_client_obj->getSentence();
     print_r($return_sentences);
-    ?>
 
 斷句結果會取得一個斷句陣列：
 
@@ -65,12 +63,10 @@
         [1] => 　歡迎(Vt)　加入(Vt)　我們(N)　的(T)　行列(N)　！(EXCLAMATIONCATEGORY)　。(PERIODCATEGORY)
     )
 
-* 取得斷詞結果
+取得斷詞結果
 
-    <?php
     $return_terms = $ckip_client_obj->getTerm();
     print_r($return_terms);
-    ?>
 
 斷詞結果會取得一個斷詞陣列，其中 term 代表斷詞， tag 代表斷詞的詞性，如動詞、名詞等等，詳細詞性列表可參考[中研院斷詞系統](http://ckipsvr.iis.sinica.edu.tw/)：
 
