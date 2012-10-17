@@ -52,9 +52,8 @@
 
 * 取得斷句結果
 
-
-    $return_sentence = $ckip_client_obj->getSentence();
-    print_r($return_sentence);
+    $return_sentences = $ckip_client_obj->getSentence();
+    print_r($return_sentences);
 
 斷句結果會取得一個斷句陣列：
 
@@ -66,9 +65,8 @@
 
 * 取得斷詞結果
 
-
-    $return_term = $ckip_client_obj->getTerm();
-    print_r($return_term);
+    $return_terms = $ckip_client_obj->getTerm();
+    print_r($return_terms);
 
 斷詞結果會取得一個斷詞陣列，其中 term 代表斷詞， tag 代表斷詞的詞性，如動詞、名詞等等，詳細詞性列表可參考[中研院斷詞系統](http://ckipsvr.iis.sinica.edu.tw/)：
 
