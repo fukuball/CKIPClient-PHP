@@ -45,23 +45,23 @@
 
 上述的範例中，我有進行前處理將文件分段，這樣斷詞出來的效果會比較好，使用一整個文件進行斷詞也可以的，但是建議一個句子（標點符號之間的字數）不要超過 80 個字：
 
-   $raw_text = "獨立音樂需要大家一起來推廣，歡迎加入我們的行列！。";
-   $return_text = $ckip_client_obj->send($raw_text);
+    $raw_text = "獨立音樂需要大家一起來推廣，歡迎加入我們的行列！。";
+    $return_text = $ckip_client_obj->send($raw_text);
 
 經過上述步驟之後就可以進行回傳文件的剖析，可以得到文件的斷句結果也可以得到文件的斷詞結果：
 
 * 取得斷句結果
 
-   $return_sentence = $ckip_client_obj->getSentence();
-   print_r($return_sentence);
+    $return_sentence = $ckip_client_obj->getSentence();
+    print_r($return_sentence);
 
 斷句結果會取得一個斷句陣列：
 
-   Array
-   (
-       [0] => 　獨立(Vi)　音樂(N)　需要(Vt)　大家(N)　一起(ADV)　來(ADV)　推廣(Vt)　，(COMMACATEGORY)
-       [1] => 　歡迎(Vt)　加入(Vt)　我們(N)　的(T)　行列(N)　！(EXCLAMATIONCATEGORY)　。(PERIODCATEGORY)
-   )
+    Array
+    (
+        [0] => 　獨立(Vi)　音樂(N)　需要(Vt)　大家(N)　一起(ADV)　來(ADV)　推廣(Vt)　，(COMMACATEGORY)
+        [1] => 　歡迎(Vt)　加入(Vt)　我們(N)　的(T)　行列(N)　！(EXCLAMATIONCATEGORY)　。(PERIODCATEGORY)
+    )
 
 * 取得斷詞結果
 
