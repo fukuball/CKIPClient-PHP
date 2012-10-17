@@ -19,3 +19,20 @@
 ### 擁有能夠執行 PHP 程式的環境
 
 使用 CKIPClient-PHP 必須先在自己的機器上安裝好能夠執行 PHP 程式的環境。
+
+## 使用方式
+
+**CKIPClient-PHP** 提供 CKIPClient.php 作為串接[中研院斷詞系統](http://ckipsvr.iis.sinica.edu.tw/)的介面程式類別， ckip-test-driver.php 是簡單的範例程式，可以直接執行這支程式來觀察斷詞結果。
+
+首先必須先將 CKIPClient.php 類別程式匯進需要使用到斷詞的 PHP 程式：
+
+    require_once "CKIPClient.php";
+
+接下來使用「線上服務申請」中取得的 server ip 、 server port 、 username 及 password 初始化 CKIPClient 物件：
+
+    $ckip_client_obj = new CKIPClient(
+        CKIP_SERVER,
+        CKIP_PORT,
+        CKIP_USERNAME,
+        CKIP_PASSWORD
+    );
