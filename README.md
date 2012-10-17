@@ -52,6 +52,7 @@
 
 * 取得斷句結果
 
+
     $return_sentence = $ckip_client_obj->getSentence();
     print_r($return_sentence);
 
@@ -64,6 +65,7 @@
     )
 
 * 取得斷詞結果
+
 
     $return_term = $ckip_client_obj->getTerm();
     print_r($return_term);
