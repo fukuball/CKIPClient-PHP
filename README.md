@@ -65,89 +65,89 @@
 
 * 取得斷詞結果
 
-   $return_term = $ckip_client_obj->getTerm();
-   print_r($return_term);
+    $return_term = $ckip_client_obj->getTerm();
+    print_r($return_term);
 
 斷詞結果會取得一個斷詞陣列，其中 term 代表斷詞， tag 代表斷詞的詞性，如動詞、名詞等等，詳細詞性列表可參考[中研院斷詞系統](http://ckipsvr.iis.sinica.edu.tw/)：
 
-   Array
-   (
-       [0] => Array
-           (
-               [term] => 獨立
-               [tag] => Vi
-           )
-       [1] => Array
-           (
-               [term] => 音樂
-               [tag] => N
-           )
-       [2] => Array
-           (
-               [term] => 需要
-               [tag] => Vt
-           )
-       [3] => Array
-           (
-               [term] => 大家
-               [tag] => N
-           )
-       [4] => Array
-           (
-               [term] => 一起
-               [tag] => ADV
-           )
-       [5] => Array
-           (
-               [term] => 來
-               [tag] => ADV
-           )
-       [6] => Array
-           (
-               [term] => 推廣
-               [tag] => Vt
-           )
-       [7] => Array
-           (
-               [term] => ，
-               [tag] => COMMACATEGORY
-           )
-       [8] => Array
-           (
-               [term] => 歡迎
-               [tag] => Vt
-           )
-       [9] => Array
-           (
-               [term] => 加入
-               [tag] => Vt
-           )
-       [10] => Array
-           (
-               [term] => 我們
-               [tag] => N
-           )
-       [11] => Array
-           (
-               [term] => 的
-               [tag] => T
-           )
-       [12] => Array
-           (
-               [term] => 行列
-               [tag] => N
-           )
-       [13] => Array
-           (
-               [term] => ！
-               [tag] => EXCLAMATIONCATEGORY
-           )
-       [14] => Array
-           (
-               [term] => 。
-               [tag] => PERIODCATEGORY
-           )
-   )
+    Array
+    (
+        [0] => Array
+            (
+                [term] => 獨立
+                [tag] => Vi
+            )
+        [1] => Array
+            (
+                [term] => 音樂
+                [tag] => N
+            )
+        [2] => Array
+            (
+                [term] => 需要
+                [tag] => Vt
+            )
+        [3] => Array
+            (
+                [term] => 大家
+                [tag] => N
+            )
+        [4] => Array
+            (
+                [term] => 一起
+                [tag] => ADV
+            )
+        [5] => Array
+            (
+                [term] => 來
+                [tag] => ADV
+            )
+        [6] => Array
+            (
+                [term] => 推廣
+                [tag] => Vt
+            )
+        [7] => Array
+            (
+                [term] => ，
+                [tag] => COMMACATEGORY
+            )
+        [8] => Array
+            (
+                [term] => 歡迎
+                [tag] => Vt
+            )
+        [9] => Array
+            (
+                [term] => 加入
+                [tag] => Vt
+            )
+        [10] => Array
+            (
+                [term] => 我們
+                [tag] => N
+            )
+        [11] => Array
+            (
+                [term] => 的
+                [tag] => T
+            )
+        [12] => Array
+            (
+                [term] => 行列
+                [tag] => N
+            )
+        [13] => Array
+            (
+                [term] => ！
+                [tag] => EXCLAMATIONCATEGORY
+            )
+        [14] => Array
+            (
+                [term] => 。
+                [tag] => PERIODCATEGORY
+            )
+    )
 
 ## License
 
