@@ -36,3 +36,126 @@
         CKIP_USERNAME,
         CKIP_PASSWORD
     );
+
+再來就可以使用 CKIPClient 物件來處理斷詞了，將需要斷詞的文件組成如下格式：
+
+   $raw_text = "獨立音樂需要大家一起來推廣，\n".
+               "歡迎加入我們的行列！。\n";
+   $return_text = $ckip_client_obj->send($raw_text);
+
+上述的範例中，我有進行前處理將文件分段，這樣斷詞出來的效果會比較好，使用一整個文件進行斷詞也可以的，但是建議一個句子（標點符號之間的字數）不要超過 80 個字：
+
+   $raw_text = "獨立音樂需要大家一起來推廣，歡迎加入我們的行列！。";
+   $return_text = $ckip_client_obj->send($raw_text);
+
+經過上述步驟之後就可以進行回傳文件的剖析，可以得到文件的斷句結果也可以得到文件的斷詞結果：
+
+* 取得斷句結果
+
+   $return_sentence = $ckip_client_obj->getSentence();
+   print_r($return_sentence);
+
+斷句結果會取得一個斷句陣列：
+
+   Array
+   (
+       [0] => 　獨立(Vi)　音樂(N)　需要(Vt)　大家(N)　一起(ADV)　來(ADV)　推廣(Vt)　，(COMMACATEGORY)
+       [1] => 　歡迎(Vt)　加入(Vt)　我們(N)　的(T)　行列(N)　！(EXCLAMATIONCATEGORY)　。(PERIODCATEGORY)
+   )
+
+* 取得斷詞結果
+
+   $return_term = $ckip_client_obj->getTerm();
+   print_r($return_term);
+
+斷詞結果會取得一個斷詞陣列，其中 term 代表斷詞， tag 代表斷詞的詞性，如動詞、名詞等等，詳細詞性列表可參考[中研院斷詞系統](http://ckipsvr.iis.sinica.edu.tw/)：
+
+   Array
+   (
+       [0] => Array
+           (
+               [term] => 獨立
+               [tag] => Vi
+           )
+       [1] => Array
+           (
+               [term] => 音樂
+               [tag] => N
+           )
+       [2] => Array
+           (
+               [term] => 需要
+               [tag] => Vt
+           )
+       [3] => Array
+           (
+               [term] => 大家
+               [tag] => N
+           )
+       [4] => Array
+           (
+               [term] => 一起
+               [tag] => ADV
+           )
+       [5] => Array
+           (
+               [term] => 來
+               [tag] => ADV
+           )
+       [6] => Array
+           (
+               [term] => 推廣
+               [tag] => Vt
+           )
+       [7] => Array
+           (
+               [term] => ，
+               [tag] => COMMACATEGORY
+           )
+       [8] => Array
+           (
+               [term] => 歡迎
+               [tag] => Vt
+           )
+       [9] => Array
+           (
+               [term] => 加入
+               [tag] => Vt
+           )
+       [10] => Array
+           (
+               [term] => 我們
+               [tag] => N
+           )
+       [11] => Array
+           (
+               [term] => 的
+               [tag] => T
+           )
+       [12] => Array
+           (
+               [term] => 行列
+               [tag] => N
+           )
+       [13] => Array
+           (
+               [term] => ！
+               [tag] => EXCLAMATIONCATEGORY
+           )
+       [14] => Array
+           (
+               [term] => 。
+               [tag] => PERIODCATEGORY
+           )
+   )
+
+## License
+
+Released under the [MIT License](http://opensource.org/licenses/MIT).
+
+
+## Contact
+
+若有任何問題可以與我聯繫，也歡迎大家幫忙修正 CKIPClient-PHP ！
+
+* Twitter: [@fukuball](https://twitter.com/fukuball)
