@@ -18,7 +18,7 @@
 
 ### 不要一次送出大量資料，也不要密集送出資料
 
-這點是我個人經驗，若一次送出大量資料，得到的回傳 xml 會不完整，造成 parse error，所以我會先自行將文章進行斷句（利用標點符號斷句），再送出給斷詞系統。也請注意不要密集送出資料給中研院斷詞系統，否則會暫時被鎖住帳號，可以在每次送出資料後，讓 script sleep 幾秒鐘，如此就不會備鎖帳號了。如何自行斷句送出資料給斷詞系統可參考：[schedule-ckip-test-driver.php](https://github.com/fukuball/CKIPClient-PHP/blob/master/schedule-ckip-test-driver.php)
+這點是我個人經驗，若一次送出大量資料，得到的回傳 xml 會不完整，造成 parse error，所以我會先自行將文章進行斷句（利用標點符號斷句），再送出給斷詞系統。也請注意不要密集送出資料給中研院斷詞系統，否則會暫時被鎖住帳號，可以在每次送出資料後，讓 script sleep 幾秒鐘，如此就不會被鎖住帳號了。如何自行斷句送出資料給斷詞系統可參考：[schedule-ckip-test-driver.php](https://github.com/fukuball/CKIPClient-PHP/blob/master/schedule-ckip-test-driver.php)
 
 ### 擁有能夠執行 PHP 程式的環境
 
