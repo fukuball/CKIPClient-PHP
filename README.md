@@ -44,12 +44,12 @@
 再來就可以使用 CKIPClient 物件來處理斷詞了，將需要斷詞的文件組成如下格式：
 
     $raw_text = "獨立音樂需要大家一起來推廣，\n".
-                "歡迎加入我們的行列！。\n";
+                "歡迎加入我們的行列！\n";
     $return_text = $ckip_client_obj->send($raw_text);
 
 上述的範例中，我有進行前處理將文件分段，這樣斷詞出來的效果會比較好，使用一整個文件進行斷詞也可以的，但是建議一個句子（標點符號之間的字數）不要超過 80 個字：
 
-    $raw_text = "獨立音樂需要大家一起來推廣，歡迎加入我們的行列！。";
+    $raw_text = "獨立音樂需要大家一起來推廣，歡迎加入我們的行列！";
     $return_text = $ckip_client_obj->send($raw_text);
 
 經過上述步驟之後就可以進行回傳文件的剖析，可以得到文件的斷句結果也可以得到文件的斷詞結果：
@@ -64,7 +64,7 @@
     Array
     (
         [0] => 　獨立(Vi)　音樂(N)　需要(Vt)　大家(N)　一起(ADV)　來(ADV)　推廣(Vt)　，(COMMACATEGORY)
-        [1] => 　歡迎(Vt)　加入(Vt)　我們(N)　的(T)　行列(N)　！(EXCLAMATIONCATEGORY)　。(PERIODCATEGORY)
+        [1] => 　歡迎(Vt)　加入(Vt)　我們(N)　的(T)　行列(N)　！(EXCLAMATIONCATEGORY)
     )
 
 取得斷詞結果
@@ -145,11 +145,6 @@
             (
                 [term] => ！
                 [tag] => EXCLAMATIONCATEGORY
-            )
-        [14] => Array
-            (
-                [term] => 。
-                [tag] => PERIODCATEGORY
             )
     )
 
