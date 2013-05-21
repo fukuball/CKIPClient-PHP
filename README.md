@@ -158,3 +158,4 @@ Released under the [MIT License](http://opensource.org/licenses/MIT).
 若有任何問題可以與我聯繫，也歡迎大家幫忙修正 CKIPClient-PHP ！
 
 * Twitter: [@fukuball](https://twitter.com/fukuball)
+* Gmail: fukuball@gmail.com
