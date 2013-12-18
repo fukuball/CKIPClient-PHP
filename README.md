@@ -1,5 +1,7 @@
 # CKIPClient-PHP 中研院斷詞系統客戶端程式
 
+[![Latest Stable Version](https://poser.pugx.org/fukuball/ckip-client-php/v/stable.png)](https://packagist.org/packages/fukuball/ckip-client-php)
+
 自然語言處理系統最基本需要讓電腦能夠分辨文本中字詞的意義，才能夠更進一步發展出自然語言處理系統的相關演算法，其中斷詞處理便是一個重要的前置技術，而中研院的[斷詞系統](http://ckipsvr.iis.sinica.edu.tw/)便是一個處理中文斷詞的系統
 
 重新撰寫中研院斷詞系統的客戶端程式，主要是想讓有中文斷詞需求的研究者或程式人員可以專注於開發自己的核心演算法，中研院官方提供的客戶端程式已有很長一段時間沒有更新維護，以我自己的經驗是用得非常不愉快， CKIPClient-PHP 可以將這些不愉快都趕走！
