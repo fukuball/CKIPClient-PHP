@@ -1,0 +1,19 @@
+{
+    "name": "fukuball/ckip-client-php",
+    "description": "中研院斷詞系統的 Client 端程式，讓有中文斷詞需求的研究者或程式人員可以專注於開發自己的核心演算法。",
+    "require-dev": {
+        "phpunit/phpunit": ">=3.7.0",
+        "satooshi/php-coveralls": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fukuball Lin",
+            "email": "fukuball@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">= 5.3"
+    }
+}

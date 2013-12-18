@@ -12,7 +12,13 @@
  * @link     http://fukuball@github.com
  */
 
-require_once "CKIPClient.php";
+require_once "src/CKIPClient.php";
+
+// change to yours
+define("CKIP_SERVER", "000.000.000.000");
+define("CKIP_PORT", 0000);
+define("CKIP_USERNAME", "xxxxxx");
+define("CKIP_PASSWORD", "xxxxxxxxx");
 
 $ckip_client_obj = new CKIPClient(
    CKIP_SERVER,

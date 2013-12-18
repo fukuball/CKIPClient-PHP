@@ -34,7 +34,7 @@
 
 首先必須先將 CKIPClient.php 類別程式匯進需要使用到斷詞的 PHP 程式：
 
-    require_once "CKIPClient.php";
+    require_once "src/CKIPClient.php";
 
 接下來使用「線上服務申請」中取得的 server ip 、 server port 、 username 及 password 初始化 CKIPClient 物件：
 
