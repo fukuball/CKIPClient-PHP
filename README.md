@@ -1,5 +1,7 @@
 # CKIPClient-PHP 中研院斷詞系統客戶端程式
 
+[![Build Status](https://travis-ci.org/fukuball/CKIPClient-PHP.png?branch=master)](https://travis-ci.org/fukuball/CKIPClient-PHP)
+[![Coverage Status](https://coveralls.io/repos/fukuball/CKIPClient-PHP/badge.png?branch=master)](https://coveralls.io/r/fukuball/CKIPClient-PHP?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/fukuball/ckip-client-php/v/stable.png)](https://packagist.org/packages/fukuball/ckip-client-php)
 
 自然語言處理系統最基本需要讓電腦能夠分辨文本中字詞的意義，才能夠更進一步發展出自然語言處理系統的相關演算法，其中斷詞處理便是一個重要的前置技術，而中研院的[斷詞系統](http://ckipsvr.iis.sinica.edu.tw/)便是一個處理中文斷詞的系統
