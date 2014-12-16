@@ -85,7 +85,23 @@ class CKIPClient
          $socket = socket_create(AF_INET, SOCK_STREAM, $protocol);
          socket_connect($socket, $this->server_ip, $this->server_port);
          socket_write($socket, $message);
-         $this->return_text = iconv("big5", "utf-8", socket_read($socket, strlen($message)*3));
+
+         $big5_string = '';
+         $buf = '';
+         while( $buf = socket_read($socket, 1024)) {
+            $len = strlen($buf);
+            if ($buf === false) {
+                echo "break cause buf is false\n";
+                break;
+            }
+            $big5_string .= $buf;
+            echo "length: " . strlen($buf) . "\n";
+            if ($len != 1024) {
+                echo "break cause buf is less than 1024\n";
+                break;
+            }
+         }
+         $this->return_text = iconv("big5", "utf-8", $big5_string);
 
          socket_shutdown($socket);
          socket_close($socket);
