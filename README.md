@@ -10,10 +10,6 @@
 
 中文斷詞系統還有 [Stanford Word Segmenter](http://nlp.stanford.edu/software/segmenter.shtml) 這個選擇，不過需要先將文本轉成簡體字再給 Stanford Word Segmenter 進行斷詞才會有比較好的效果，但為了支持國產還是鼓勵大家多多使用中研院的斷詞系統，或許多多使用未來中研院的斷詞系統會就變得越來越好（？）
 
-## Demo
-
-### [線上中文斷詞](http://www.fukuball.com/ckip-client/)
-
 ## 注意事項
 
 ### [申請帳號](http://ckipsvr.iis.sinica.edu.tw/)
