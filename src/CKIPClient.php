@@ -88,16 +88,13 @@ class CKIPClient
 
          $big5_string = '';
          $buf = '';
-         while( $buf = socket_read($socket, 1024)) {
+         while ($buf = socket_read($socket, 1024)) {
             $len = strlen($buf);
             if ($buf === false) {
-                echo "break cause buf is false\n";
                 break;
             }
             $big5_string .= $buf;
-            echo "length: " . strlen($buf) . "\n";
             if ($len != 1024) {
-                echo "break cause buf is less than 1024\n";
                 break;
             }
          }
